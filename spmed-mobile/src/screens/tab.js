@@ -46,7 +46,7 @@ export default class BottomTab extends Component {
                   inactiveBackgroundColor: '#0B56E3',
                   activeTintColor: '#FFF',
                   inactiveTintColor: '#FFF',
-                  style: {height : 50}
+                  style: {height : 60}
                 }}
                 screenOptions={({route}) => ({
                   tabBarIcon: () => {
