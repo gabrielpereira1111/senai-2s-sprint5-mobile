@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
 
   mainHeaderLine: {
-    width: 220,
+    width: 300,
     paddingTop: 5,
     borderBottomColor: '#0B56E3',
     borderBottomWidth: 1

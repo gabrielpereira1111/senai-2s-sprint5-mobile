@@ -39,25 +39,20 @@ export default class consultasPaciente extends Component {
 
   async loadFonts(){
     await Font.loadAsync({
-      'Roboto-Regular': {
-        uri: require('../../assets/fonts/Roboto-Regular.ttf'),
+      'OpenSans-Regular': {
+        uri: require('../../assets/fonts/OpenSans-Regular.ttf'),
         display: Font.FontDisplay.FALLBACK,
       },
 
-      'Roboto-Light': {
-        uri: require('../../assets/fonts/Roboto-Light.ttf'),
+      'OpenSans-Light': {
+        uri: require('../../assets/fonts/OpenSans-Light.ttf'),
         display: Font.FontDisplay.FALLBACK,
       },
 
-      'Roboto-Thin': {
-        uri: require('../../assets/fonts/Roboto-Thin.ttf'),
+      'OpenSans-Bold': {
+        uri: require('../../assets/fonts/OpenSans-Bold.ttf'),
         display: Font.FontDisplay.FALLBACK,
       },
-
-      'Roboto-Medium': {
-        uri: require('../../assets/fonts/Roboto-Medium.ttf'),
-        display: Font.FontDisplay.FALLBACK,
-      }
     })
   }
 
@@ -115,6 +110,7 @@ const styles = StyleSheet.create({
 
   ImgHeaderPerfil:{
     marginBottom: 50,
+    marginTop: 25
   },
 
   ImgLogoPerfil: {
@@ -136,6 +132,7 @@ const styles = StyleSheet.create({
   tituloCP: {
     color: '#0B56E3',
     fontSize: 17,
+    fontFamily: 'OpenSans-Bold'
   },
 
   flatItemContainer: {
@@ -144,16 +141,22 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 300,
     height: 85,
-    paddingLeft: 10
+    paddingLeft: 10,
   },
 
   flatItemInfoMedico: {
     color: '#0B56E3',
     fontSize: 25,
     marginBottom: 5,
+    fontFamily: 'OpenSans-Bold'
   },
 
   flatItemInfo: {
-    color: '#0B56E3'
+    color: '#0B56E3',
+    fontFamily: 'OpenSans-Light'
+  },
+
+  body: {
+    flex: 4
   }
 });
