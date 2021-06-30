@@ -89,9 +89,15 @@ export default class consultasMedico extends Component {
   renderItem = ({item}) => (
     <View style={styles.flatItemRow}>
       <View style={styles.flatItemContainer}>
-        <Text style={styles.flatItemInfoMedico}>{item.idpacientesNavigation.nome}</Text>
-        <Text style={styles.flatItemInfo}>{Intl.DateTimeFormat('pt-BR').format(new Date(item.dataConsulta))}</Text>
-        <Text style={styles.flatItemInfo}>{item.situacao}</Text>
+          <Text style={styles.flatItemInfoMedico}>{item.idpacientesNavigation.nome}</Text>
+          <Text style={styles.flatItemInfo}>{Intl.DateTimeFormat('pt-BR').format(new Date(item.dataConsulta))}</Text>
+          <Text style={styles.flatItemInfo}>{item.situacao}</Text>
+
+          <View style={styles.containerDescription}>
+            <Text style={styles.description}>{item.descricao}</Text>
+          </View>
+
+        
       </View>
     </View>
   )
@@ -150,10 +156,25 @@ const styles = StyleSheet.create({
 
   flatItemInfo: {
     color: '#0B56E3',
-    fontFamily: 'OpenSans-Light'
+    fontFamily: 'OpenSans-Light',
+    width: 90
   },
 
   body: {
     flex: 4
+  },
+
+  containerDescription: {
+     backgroundColor: '#0B56E3',
+    marginLeft: 105,
+    marginTop: -66,
+    height: 85,
+    paddingLeft: 5,
+    paddingTop: 5
+  },
+
+  description: {
+    color: 'white',
+    fontSize: 12
   }
 });
