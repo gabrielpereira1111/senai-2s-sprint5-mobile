@@ -9,8 +9,8 @@ export default class Login extends Component {
     constructor(props){
         super(props)
         this.state = {
-            email : 'ricardo.lemos@spmedicalgroup.com.br',
-            senha : 'LEMOS',
+            email : '',
+            senha : '',
         }
     }
 
@@ -68,6 +68,7 @@ export default class Login extends Component {
                         <TouchableOpacity
                             style={styles.btnLogin}
                             onPress={this.fazerLogin}
+                            disabled={this.state.email === '' || this.state.senha === '' ? true : false}
                         >
                             <Text style={styles.btnLoginText}>login</Text>
                         </TouchableOpacity>
